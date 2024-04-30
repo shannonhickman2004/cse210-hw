@@ -10,19 +10,19 @@ class Program
 
         string letter = "";
 
-        if {grade >= 90}
+        if (percent >= 90)
         {
             letter = "A";
-        }
-        else if (grade >= 80)
+        } 
+        else if (percent >= 80)
         {
             letter = "B";
         }
-        else if {grade >= 70}
+        else if (percent >= 70)
         {
             letter = "C";
         }
-        else if {grade >= 60}
+        else if (percent >= 60)
         {
             letter = "D";
         }
@@ -33,7 +33,7 @@ class Program
 
         Console.WriteLine($"Your grade is {letter}");
 
-        if {percent >= 70}
+        if (percent >= 70)
         {
             Console.WriteLine("You passed!");
         }
