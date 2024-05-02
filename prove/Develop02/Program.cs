@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 class Program
 {
-
+//For creativity I added in an extra journal entry that rates the day on a scale of 1 to and and stores it along with the other journal pieces.
     static void Main(string[] args)
     {
         Journal theJournal = new Journal();
@@ -36,7 +36,7 @@ class Program
                 Console.Write(Prompt);
                 newEntry._promptText = Prompt;
                 newEntry._entryText = Console.ReadLine();
-                Console.Write("From 1-5 Rate Today, 5 Being Excellent, 1 Not so Much:");
+                Console.Write("From 1-5 Rate Today, 5 Being Excellent, 1 Not so Much: ");
                 newEntry._ratingText = Console.ReadLine();
                 theJournal.AddEntry(newEntry);
             }
