@@ -17,17 +17,17 @@ public class Scripture
              .Select(word => new Word(word))
              .ToList();
     }
-    public void HideRandomWords (int numbertoHide)
+    public void HideRandomWords(int numbertoHide)
     {
         if (numbertoHide <= 0)
             return;
 
-            Random random = new Random();
-            for (int i = 0; i < numbertoHide; i++)
-            {
-                int randomIndex = random.Next(_words.Count);
-                _words[randomIndex].Hide();
-            }
+        Random random = new Random();
+        for (int i = 0; i < numbertoHide; i++)
+        {
+            int randomIndex = random.Next(_words.Count);
+            _words[randomIndex].Hide();
+        }
     }
 
 
@@ -41,8 +41,8 @@ public class Scripture
         return string.Join(" ", displayWords);
     }
 
-   public bool IsCompletelyHidden()
+    public bool IsCompletelyHidden()
     {
         return _words.All(word => word.IsHidden);
     }
-    }
+}

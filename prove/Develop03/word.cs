@@ -29,5 +29,5 @@ public class Word
         get { return _text; }
     }
 
-    
+
 }

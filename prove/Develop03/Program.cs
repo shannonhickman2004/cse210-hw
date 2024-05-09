@@ -7,7 +7,7 @@ class Program
     static void Main(string[] args)
     {
         List<Scripture> scriptures = new List<Scripture>();
- 
+
         string fileName = "..\\..\\..\\randomscripture.csv";
         string directory = Directory.GetCurrentDirectory();
         string filePath = Path.Combine(directory, fileName);
@@ -44,13 +44,13 @@ class Program
             }
         }
         catch (Exception ex)
-        
+
         {
             Console.WriteLine($"An error occurred: {ex.Message}");
         }
 
         Console.WriteLine("Press any key to exit...");
         Console.ReadKey();
-        
+
     }
 }

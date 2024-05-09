@@ -14,7 +14,7 @@ public class Reference
         _book = book;
         _chapter = chapter;
         _verse = verse;
-      
+
     }
 
     public Reference(string referenceText)
@@ -28,10 +28,10 @@ public class Reference
 
         _chapter = int.Parse(chapterText);
 
-        var verseParts =versusText.Split("-");
+        var verseParts = versusText.Split("-");
 
         _verse = int.Parse(verseParts[0]);
-        if(verseParts.Length > 1)
+        if (verseParts.Length > 1)
         {
             _endVerse = int.Parse(verseParts[1]);
         }
@@ -42,7 +42,7 @@ public class Reference
         _book = book;
         _chapter = chapter;
         _verse = startVerse;
-        _endVerse = endVerse;    
+        _endVerse = endVerse;
     }
 
     public string GetDisplayText()
