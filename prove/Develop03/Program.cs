@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-
+//for bonus put in a csv file which calls random scripture references and the text, and could be expanded to include more.
 class Program
 {
     static void Main(string[] args)
