@@ -23,28 +23,28 @@ public class ReflectingActivity : Activity
         "How can you keep this experience in mind in the future?"
     };
 
-    public ReflectingActivity(string name, string description, int duration = 0): base (name, description, duration)
+    public ReflectingActivity(string name, string description, int duration = 0) : base(name, description, duration)
     {
     }
 
     public void Run()
     {
-        
+
         SetDurationFromInput();
         DisplayStartingMessage();
 
-        // Display random prompt
+        // Give a random prompt
         DisplayPrompt();
         ShowSpinner(5);
 
-        // Display reflection questions
+        // Give a random question about the prompt, and then give more
         DisplayQuestions();
         ShowSpinner(5);
 
         DisplayEndingMessage();
 
         // Continue showing questions until the duration is reached
-        
+
     }
 
     private string GetRandomPrompt()
@@ -69,12 +69,13 @@ public class ReflectingActivity : Activity
     {
         DateTime startTime = DateTime.Now;
         DateTime stopTime = startTime.AddSeconds(_duration);
-       
+
         foreach (string question in reflectionQuestions)
         {
             Console.WriteLine(question);
             ShowSpinner(5);
-            if (DateTime.Now < stopTime){
+            if (DateTime.Now < stopTime)
+            {
                 //time has expired, breakout of loop
                 break;
             }

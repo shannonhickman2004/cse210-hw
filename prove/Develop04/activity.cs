@@ -21,33 +21,33 @@ public class Activity
         Console.Clear();
         Console.WriteLine($"Welcome to {_name}");
         Console.WriteLine($"{_description}");
-        ShowSpinner(5);
+        ShowSpinner(1);
     }
 
     public void SetDurationFromInput()
     {
-      {
-        Console.WriteLine("How many seconds would you like to allocate for this activity?");
-        int durationSeconds;
-        while (!int.TryParse(Console.ReadLine(), out durationSeconds) || durationSeconds <= 0)
         {
-            Console.WriteLine("Please enter a valid positive integer for the duration in minutes:");
+            Console.WriteLine("How many seconds would you like to allocate for this activity?");
+            int durationSeconds;
+            while (!int.TryParse(Console.ReadLine(), out durationSeconds) || durationSeconds <= 0)
+            {
+                Console.WriteLine("Please enter a valid positive integer for the duration in minutes:");
+            }
+            _duration = durationSeconds;
         }
-        _duration =  durationSeconds; 
-    }
     }
 
     public void DisplayEndingMessage()
     {
         Console.WriteLine("Well Done!");
-        ShowSpinner(5);
+        ShowSpinner(1);
         Console.Clear();
     }
 
     public void ShowCountDown(int seconds)
     {
         DateTime endTime = DateTime.Now.AddSeconds(seconds);
-    
+
         for (int i = seconds; i > 0; i--)
         {
             Console.Write(i);
@@ -67,11 +67,5 @@ public class Activity
             Console.Write("\b \b");
         }
 
-        //DateTime endTime = DateTime.Now.AddSeconds(seconds);
-        //while (DateTime.Now < endTime)
-       // {
-            // Do nothing, just wait
-       // }
-       
     }
 }

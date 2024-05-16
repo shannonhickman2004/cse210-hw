@@ -7,7 +7,7 @@ public class ListingActivity : Activity
     private List<string> _prompts;
     private int _count;
 
-    public ListingActivity(string name, string description, int duration = 0): base (name, description, duration)
+    public ListingActivity(string name, string description, int duration = 0) : base(name, description, duration)
     {
         _prompts = new List<string> {
             "Who are people that you appreciate?",
@@ -25,13 +25,13 @@ public class ListingActivity : Activity
 
         GetRandomPrompt(); // Display a random prompt
 
-        // Prompt the user to list items
+        // Get a list from 
         List<string> items = GetListFromUser();
 
-        // Display the number of items listed
+        // Display how many items there are
         Console.WriteLine($"You listed {items.Count} items.");
 
-        // Store the count of items
+        // Store how many items
         _count = items.Count;
 
         // Display ending message
@@ -57,7 +57,7 @@ public class ListingActivity : Activity
         Console.WriteLine("Start listing items:");
         DateTime startTime = DateTime.Now;
 
-        // Allow user to list items until duration is reached
+        // Lets user list items until time is up
         while ((DateTime.Now - startTime).TotalSeconds < _duration)
         {
             Console.Write("Item: ");
