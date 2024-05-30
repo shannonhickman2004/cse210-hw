@@ -8,7 +8,7 @@ class Program
         Address address1 = new Address("13 Joe Street", "Herriman", "UT", "USA");
         Address address2 = new Address("45 Thick Street", "Toronto", "ON", "Canada");
 
-        // list of orders
+        // List of orders
         Order order1 = new Order("Kaitlin Smith", address1);
         order1.AddProduct("Laptop", "Chrome525", 1553, 1);
         order1.AddProduct("Monitor", "Monitor123", 313, 2);
@@ -17,7 +17,7 @@ class Program
         order2.AddProduct("Keyboard", "Key323", 35, 1);
         order2.AddProduct("Mouse", "Mouse12", 40, 1);
 
-        // Order Details
+        // Order details
         Console.WriteLine("Order 1:");
         Console.WriteLine("Packing Label:");
         Console.WriteLine(order1.GetPackingLabel());
