@@ -5,8 +5,8 @@ class Program
     static void Main(string[] args)
     {
         // List of addresses
-        Address address1 = new Address("13 Joe Street", "Herriman", "UT", "USA");
-        Address address2 = new Address("45 Thick Street", "Toronto", "ON", "Canada");
+        Address address1 = new Address("13856 S Carnoustie", "Herriman", "UT", "USA");
+        Address address2 = new Address("45 Hedgehog", "Toronto", "ON", "Canada");
 
         // List of orders
         Order order1 = new Order("Kaitlin Smith", address1);
